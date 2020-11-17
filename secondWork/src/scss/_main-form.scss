@@ -1,0 +1,430 @@
+.main-form {
+
+    padding: 0 18px;
+    margin-bottom: 39px;
+    
+    @include tablet {
+        padding: 0 60px;
+        
+    }
+    
+    &__form {
+        display: flex;
+        flex-direction: column;
+        
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-image: url('../img//dest/Ellipse\ 1.svg');
+            background-position: 50% 0%;
+            background-size: 65% 65%;
+            background-repeat: no-repeat;
+        }
+        
+        @include laptopL {
+            background-position: 50% 32%;
+            background-size: 74% 79%;
+        }
+    }
+
+    &__heading {
+        width: 100%;
+        margin: 0 auto 27px;
+        line-height: 43px;
+        text-transform: none;
+        text-align: start;
+        
+        @include tablet {
+            width: 100%;
+            text-align: center;
+            letter-spacing: 0.8px;
+            margin-bottom: 70px;
+        }
+    }
+}
+
+.fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+.legend {
+    padding-bottom: 7px;
+    margin-bottom: 31px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000;
+}
+
+.contacts-label {
+    margin-bottom: 9px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+
+    @include tablet {
+        width: 50%;
+        order: 1;
+    }
+}
+
+.star {
+    color: #AE1010;
+}
+
+.contacts-input {
+    width: 340px;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 19px 0px 19px 30px;
+    font-weight: 500;
+    font-size: 10px;
+
+    border: 1px solid #E7E7E7;
+    border-radius: 3px;
+
+    &:invalid {
+        border: 1px solid var(--notice-color);
+    }
+
+    &::placeholder {
+        color: var(--placeholder-color);
+        font-weight: 500;
+        font-size: 10px;
+    }
+
+    &:last-child {
+        margin-bottom: 32px;
+
+        @include tablet {
+            margin-bottom: 36px;
+        }
+    }
+
+    @include tablet {
+        width: 48%;
+        order: 2;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+.socials-field,
+.find-out {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 90px;
+    
+    @include tablet {
+        width: 48%;
+        justify-content: space-between;
+    }
+}
+
+.socials-field {
+    @include tablet {
+        margin-right: 4%;
+    }
+}
+
+.contacts-checkbox {
+    display: none;
+}
+
+.checkbox-label {
+    position: relative;
+    display: inline;
+    margin: 0;
+    max-width: 25%;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 22px;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #E7E7E7;
+        border-radius: 3px;
+    }
+
+    &::before {
+        content: url('../img/dest/VectorYellow.svg');
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        font-size: 22px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+
+.contacts-checkbox:checked + .checkbox-label::before {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.find-out {
+    padding-bottom: 63px;
+    margin-bottom: 8px;
+    
+    &__legend {
+        margin-bottom: 39px;
+
+        @include tablet {
+            margin-bottom: 33px;
+        }
+    }
+}
+
+.agreed-checkbox {
+    display: none;
+}
+
+.agreed-label {
+    position: relative;
+    margin-left: 30px;
+    font-size: 10px;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 0;
+        height: 15px;
+        width: 15px;
+        border: 1px solid #E7E7E7;
+        border-radius: 3px;
+    }
+
+    &::before {
+        content: '';
+        background-image: url('../img/dest/VectorYellow.svg');
+        background-repeat: no-repeat;
+        background-size: 58%;
+        background-position: center;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        left: -30px;
+        font-size: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+
+.agreed-checkbox:checked + .agreed-label::before {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.checkbox-desc {
+    margin: 10px 0 28px 30px;
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--decs-color);
+    letter-spacing: -0.5px;
+
+    @include tablet {
+        width: 100%;
+    }
+}
+
+.agreedMail-desc {
+    @include tablet {
+        margin-bottom: 44px;
+    }
+}
+
+.agreed-wrapper {
+    position: relative;
+    margin-left: 30px;
+    font-size: 10px;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 0;
+        height: 15px;
+        width: 15px;
+        border: 1px solid #E7E7E7;
+        border-radius: 3px;
+    }
+
+    @include tablet {
+        width: 100%;
+    }
+}
+
+.agreed-check {
+    background-image: url('../img/dest/VectorYellow.svg');
+    background-repeat: no-repeat;
+    background-size: 58%;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    font-size: 10px;
+}
+
+.privacy-politic-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 34;
+}
+
+.privacy-politic-wrapper {
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    width: 80%;
+    height: 80%;
+    padding: 25px;
+    padding-top: 42px;
+    font-size: 14px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 12px;
+
+    @include tablet {
+        width: 84%;
+        height: fit-content;
+        top: 7%;
+        left: 8%;
+    }
+}
+
+.text-privacy-politic {
+    margin-bottom: 15px;
+}
+
+.privacy-close-button {
+    position: absolute;
+    top: 20px;
+    right: 17px;
+    height: 20px;
+    width: 20px;
+    transition: transform 0.3s ease-in-out;
+    
+    &:hover,
+    &:active {
+        transform: rotate(180deg);
+        transform-origin: 50% 50%;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+.privacy-close-span,
+.privacy-close-span::after {
+    display: block;
+    height: 4px;
+    width: 20px;
+    background-color: #000;
+                                
+}
+
+.privacy-close-span {
+    transform: rotate(45deg);
+}
+
+.privacy-close-span::after {
+    content: '';
+    transform: rotate(90deg);
+}
+
+.main-form__desc {
+    margin-top: 39px;
+    margin-bottom: 28px;
+
+    @include tablet {
+        margin-top: 5px;
+        margin-bottom: 41px;
+    }
+}
+
+.main-form__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 49px;
+    margin: 0 auto;
+    padding-left: 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: var(--base-color);
+    border-radius: 30px;
+    transition: transform 0.3s ease-in-out;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 9%;
+        top: 40%;
+        height: 10px;
+        width: 10px;
+        background-image: url('../img/dest/Vector.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+    }
+
+    &:hover,
+    &:active {
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1.1);
+    }
+
+    @include tablet {
+        align-self: flex-start;
+        margin: 0;
+    }
+}
+
+.eror {
+    border: 1px solid var(--notice-color);
+}
+
+.eror-descr {
+    color: var(--notice-color);
+    font-size: 10px;
+}
+
+.eror-descr-text {
+    margin-top: -17px;
+    margin-bottom: 7px;
+    display: block;
+    width: 100%;
+    
+    @include tablet{
+        margin-top: -19px;
+        order: 3;
+    }
+}

@@ -1,0 +1,62 @@
+.footer {
+
+    display: flex;
+    flex-direction: column;
+    background-color: #272727;
+
+    @include laptopL {
+        margin-left: 20%;
+    }
+
+    &__tel {
+        position: relative;
+        padding: 20px 0 17px 5px;
+        margin-left: 15%;
+        width: 85%;
+        font-weight: 900;
+        font-size: 24px;
+        color: #fff;
+        letter-spacing: 2.4px;
+        transition: color 0.3s ease-in-out;
+
+        @include tablet {
+            padding: 21px 0 17px 68px;
+        }
+
+        @include laptopL {
+            margin-left: 4%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: -17%;
+            width: 5px;
+            height: 139%;
+            background-color: #fff;
+        }
+    }
+
+    &__tel:first-child {
+        border-bottom: 5px solid #fff;
+        margin-bottom: 56px;
+        &::before {
+            transform: rotate(-38deg);
+        }
+    }
+
+    &__tel:last-child {
+        border-top: 5px solid #fff;
+        &::before {
+            transform: rotate(38deg);
+            top: -21%
+        }
+    }
+
+    &__tel:hover,
+    &__tel:after {
+        transition: color 0.3s ease-in-out;
+        color: var(--base-color);
+    }
+}

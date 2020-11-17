@@ -1,0 +1,93 @@
+%background-card-img {
+    background-repeat: no-repeat;
+    background-size: 100% 195px;
+    background-position: top center;
+}
+
+.italy-card {
+    @extend %background-card-img;
+    background-image: url('../img/dest/687_anons-min_480_275_5_90.jpg');
+}
+
+.iceland-card {
+    @extend %background-card-img;
+    background-image: url('../img/dest/430_anons_480_275_5_90.jpg');
+}
+
+.turkey-card {
+    @extend %background-card-img;
+    background-image: url('../img/dest/640anons_480_275_5_90.jpg');
+}
+
+.nord-card {
+    @extend %background-card-img;
+    background-image: url('../img/dest/117_anons-min_480_275_5_90.jpg');
+}
+
+.card-price {
+    display: block;
+    margin-bottom: 10px;
+    padding-top: 14px;
+    width: 160px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    background-color: var(--base-color);
+}
+
+.country {
+    display: block;
+    color: var(--country-color);
+    font-size: 9px;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+}
+
+.card-heading {
+    font-size: 18px;
+    margin-bottom: 16px;
+    
+    &__link {
+        position: relative;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease-in-out; 
+    }
+    
+    &:hover &__link {
+        border-bottom: 2px solid #000;
+    }
+}
+
+.country-direction {
+    margin-bottom: 4px;
+    font-size: 9px;
+    line-height: 13px;
+    color: var(--desc-color);
+}
+
+.card-descr {
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.tour-language {
+    padding-left: 5px;
+}
+
+.tour-dates {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.extra-descr {
+    display: block;
+    width: 130px;
+    height: 17px;
+    padding-top: 3px;
+    color: #fff;
+    font-size: 9px;
+    background-color: var(--notice-color);
+    border-radius: 3px;
+    text-align: center;
+}

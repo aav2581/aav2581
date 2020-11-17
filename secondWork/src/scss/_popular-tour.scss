@@ -1,0 +1,115 @@
+.popular-tours {
+    position: relative;
+    padding-top: 41px;
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+    border-bottom: 2px solid #c4c4c4;
+    @include tablet {
+        border-bottom: 2px solid transparent;
+        padding-top: 0;
+        margin-bottom: 58px;
+    }
+
+    &__heading {
+        margin-bottom: 28px;
+        text-align: center;
+        padding: 0 20px;
+        line-height: 44px;
+        @include tablet {
+            padding: 0;
+            margin: 7px 0 46px 21px;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        height: 215px;
+        @include tablet {
+            width: 90%;
+            height: 279px;
+        }
+    }
+
+    &__cards {
+        padding-top: 145px;
+        width: 253px;
+        background-size: 100% 158px;
+        padding-top: 118px;
+        @include tablet {
+            padding-top: 169px;
+            width: 380px;
+            background-size: 100% 219px;
+        }
+    }
+
+    &__card-price {
+        width: 119px;
+        height: 40px;
+        padding-top: 11px;
+        margin-bottom: 4px;
+        @include tablet {
+            width: 160px;
+            height: 50px;
+            padding-top: 14px;
+        }
+    }
+
+    &__card-link::after {
+        width: 250px;
+        height: 347px
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        cursor: pointer;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        content: '';
+        display: none;
+    }
+    
+}
+
+.popular-tours__button-prev,
+.popular-tours__button-next {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/dest/Vector.svg');
+    background-size: 50%;
+    transition: border 0.3s ease-in-out; 
+
+    @include tablet {
+        border: 1px solid transparent;
+        top: 55%;
+        right: 0%;
+
+        &:hover,
+        &:active {
+        transition: border 0.3s ease-in-out;        
+        border: 1px solid #000;
+        }
+    }
+
+    &:hover,
+    &:active {
+        transition: border 0.3s ease-in-out;        
+        border: 2px solid #000;
+    }
+}
+
+.popular-tours__button-prev {
+    transform: rotate(180deg);
+    left: 5%;
+    
+    @include tablet {
+        left: 0%;
+    }
+}

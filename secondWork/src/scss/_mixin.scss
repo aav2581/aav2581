@@ -1,0 +1,21 @@
+@mixin outline {
+	outline: 1px solid red;
+}
+
+@mixin tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin laptopL {
+	@media (min-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin mobileL {
+	@media (min-width: 425px) {
+		@content;
+	}
+}

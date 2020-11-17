@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320px, initial-scale=1.0">
+    <title>SomeHotel</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="icon" href="fav.svg" sizes="any">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+   
+    <header class="header">
+        <h1 class="visually-hidden">SomeHotel</h1>
+        <button class="header__burger" aria-label="Открыть меню">
+            <span class="header__burger-span"></span>
+        </button>
+        <div class="header-wrapper display-none">
+            <div class="header-container">
+                <button class="header__close-button" aria-label="Закрыть меню">
+                    <span class="header__close-span"></span>
+                </button>
+                <form action="#" class="header__form-countries form-countries">
+                    <select name="countries" id="countries" class="select-countries">
+                        <option value="placeholder" placeholder class="country-placeholder">Страны</option>
+                        <optgroup class="select-countries__continent" label="Южная Америка">
+                            <option value="Аргентина" class="select-countries__option">Аргентина</option>
+                            <option value="Бразилия" class="select-countries__option">Бразилия</option>
+                            <option value="Перу" class="select-countries__option">Перу</option>
+                            <option value="Уругвай" class="select-countries__option">Уругвай</option>
+                            <option value="Чили" class="select-countries__option">Чили</option>
+                            <option value="Эквадор" class="select-countries__option">Эквадор</option>
+                            <option value="Все туры континента" class="option-all-continent">Все туры на континенте</option>
+                        </optgroup>
+                        <optgroup class="select-countries__continent" label="Северная Америка"></optgroup>
+                        <optgroup class="select-countries__continent" label="Арктика и Антарктика"></optgroup>
+                        <optgroup class="select-countries__continent" label="Африка"></optgroup>
+                        <optgroup class="select-countries__continent" label="Австралия и Океания"></optgroup>
+                        <optgroup class="select-countries__continent" label="Европа"></optgroup>
+                        <optgroup class="select-countries__continent" label="Россия"></optgroup>
+                        <optgroup class="select-countries__continent" label="Азия"></optgroup>
+                    </select>
+                    <input type="text" placeholder="Даты" class="header-form__data">
+                    <select name="type-trip" id="type-trip" class="select-trip">
+                        <option value="placeholder" placeholder>Тип путешествия</option>
+                        <option value="Активный" class="select-trip__option">Активный</option>
+                        <option value="Майские" class="select-trip__option">Майские</option>
+                        <option value="На авто" class="select-trip__option">На авто</option>
+                        <option value="На корабле" class="select-trip__option">На корабле</option>
+                        <option value="Новый год" class="select-trip__option">Новый год</option>
+                        <option value="Поход" class="select-trip__option">Поход</option>
+                        <option value="Серфинг" class="select-trip__option">Серфинг</option>
+                        <option value="Эксклюзив" class="select-trip__option">Эксклюзив</option>
+                        <option value="Экскурсионный" class="select-trip__option">Экскурсионный</option>
+                        <option value="Экспедиция" class="select-trip__option">Экспедиция</option>
+                    </select>
+                    <button class="form-countries__button header-button" type="submit" aria-label="Найти путешествие">Найти</button>
+                </form>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link">ПУТЕШЕСТВИЯ</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">О НАС</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">ОТЗЫВЫ</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">БЛОГ</a></li>
+                    </ul>
+                </nav>
+                <a href="tel:88001234567" class="header__tel">8 (800) 123-45-67</a>
+                <button class="header-button help-btn" aria-label="Подберите мне тур">Подберите мне тур</button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container main__container">
+            <section class="last-minute-tour">
+                <h2 class="main__header last-minute-tour__heading">Горящие туры</h2>
+                <div class="filtred-button-container">
+                    <button class="filtred-button filtred-button--active spain-btn">Испания</button>
+                    <button class="filtred-button filtred-button--active italy-btn">Италия</button>
+                    <button class="filtred-button filtred-button--active iceland-btn">Исландия</button>
+                    <button class="filtred-button filtred-button--active turkey-btn">Турция</button>
+                </div>
+                <div class="last-minute-tour__container swiper-container" data-mobile="false">
+                    <div class="swiper-wrapper">
+                        <div class="last-minute-card swiper-slide italy-card">
+                            <span class="card-price">от 118 112 &#8381;</span>
+                            <span class="country">Италия</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Под небом Тосканы</a></h3>
+                            <p class="country-direction">Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) — Ла Верна — Ангиари — Монтерки — Ареццо — Кортона — (Пиенца) - (Монтепульчано)</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates">27.04.19 - 04.05.19 и еще 15 дат</span>
+                            <span class="extra-descr">Авиаперелет включен!</span>
+                        </div>
+                        <div class="last-minute-card swiper-slide iceland-card">
+                            <span class="card-price">140 715 &#8381;</span>
+                            <span class="country">Исландия</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Майские каникулы в Исландии</a></h3>
+                            <p class="country-direction">Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль — Сельяландсфосс — Скоугафосс — Йёкюльсаурлоун — Голубая Лагуна — Снайфельсйёкутль — Arnarstapi — Рейкьявик</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates">27.04.19 - 04.05.19</span>
+                        </div>
+                        <div class="last-minute-card swiper-slide turkey-card">
+                            <span class="card-price">37 302 &#8381;</span>
+                            <span class="country">Турция</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Открытие Турции</a></h3>
+                            <p class="country-direction">Стамбул — Анкара — Каппадокия — Конья — Памуккале — Эфес — Кушадасы — Пергам — Ассос — Троя — Стамбул</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates"> 28.04.19 - 05.05.19и еще 3 даты</span>
+                        </div>
+                        <div class="last-minute-card swiper-slide display-none nord-card">
+                            <span class="card-price">от 118 112 &#8381;</span>
+                            <span class="country">Италия</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Под небом Тосканы</a></h3>
+                            <p class="country-direction">Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) — Ла Верна — Ангиари — Монтерки — Ареццо — Кортона — (Пиенца) - (Монтепульчано)</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates">27.04.19 - 04.05.19 и еще 15 дат</span>
+                            <span class="extra-descr">Авиаперелет включен!</span>
+                        </div>
+                        <div class="last-minute-card swiper-slide display-none iceland-card">
+                            <span class="card-price">140 715 &#8381;</span>
+                            <span class="country">Исландия</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Майские каникулы в Исландии</a></h3>
+                            <p class="country-direction">Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль — Сельяландсфосс — Скоугафосс — Йёкюльсаурлоун — Голубая Лагуна — Снайфельсйёкутль — Arnarstapi — Рейкьявик</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates">27.04.19 - 04.05.19</span>
+                        </div>
+                        <div class="last-minute-card swiper-slide display-none turkey-card">
+                            <span class="card-price">37 302 &#8381;</span>
+                            <span class="country">Турция</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Открытие Турции</a></h3>
+                            <p class="country-direction">Стамбул — Анкара — Каппадокия — Конья — Памуккале — Эфес — Кушадасы — Пергам — Ассос — Троя — Стамбул</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates"> 28.04.19 - 05.05.19и еще 3 даты</span>
+                        </div>
+                        <div class="last-minute-card swiper-slide display-none nord-card">
+                            <span class="card-price">от 118 112 &#8381;</span>
+                            <span class="country">Италия</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Под небом Тосканы</a></h3>
+                            <p class="country-direction">Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) — Ла Верна — Ангиари — Монтерки — Ареццо — Кортона — (Пиенца) - (Монтепульчано)</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates">27.04.19 - 04.05.19 и еще 15 дат</span>
+                            <span class="extra-descr">Авиаперелет включен!</span>
+                        </div>
+                        <div class="last-minute-card swiper-slide display-none iceland-card">
+                            <span class="card-price">140 715 &#8381;</span>
+                            <span class="country">Исландия</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Майские каникулы в Исландии</a></h3>
+                            <p class="country-direction">Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль — Сельяландсфосс — Скоугафосс — Йёкюльсаурлоун — Голубая Лагуна — Снайфельсйёкутль — Arnarstapi — Рейкьявик</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates">27.04.19 - 04.05.19</span>
+                        </div>
+                        <div class="last-minute-card swiper-slide display-none turkey-card">
+                            <span class="card-price">37 302 &#8381;</span>
+                            <span class="country">Турция</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Открытие Турции</a></h3>
+                            <p class="country-direction">Стамбул — Анкара — Каппадокия — Конья — Памуккале — Эфес — Кушадасы — Пергам — Ассос — Троя — Стамбул</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates"> 28.04.19 - 05.05.19и еще 3 даты</span>
+                        </div>
+                        <div class="last-minute-card swiper-slide display-none italy-card">
+                            <span class="card-price">от 118 112 &#8381;</span>
+                            <span class="country">Италия</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Под небом Тосканы</a></h3>
+                            <p class="country-direction">Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) — Ла Верна — Ангиари — Монтерки — Ареццо — Кортона — (Пиенца) - (Монтепульчано)</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates">27.04.19 - 04.05.19 и еще 15 дат</span>
+                            <span class="extra-descr">Авиаперелет включен!</span>
+                        </div>
+                        <div class="last-minute-card swiper-slide display-none nord-card">
+                            <span class="card-price">140 715 &#8381;</span>
+                            <span class="country">Исландия</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Майские каникулы в Исландии</a></h3>
+                            <p class="country-direction">Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль — Сельяландсфосс — Скоугафосс — Йёкюльсаурлоун — Голубая Лагуна — Снайфельсйёкутль — Arnarstapi — Рейкьявик</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates">27.04.19 - 04.05.19</span>
+                        </div>
+                        <div class="last-minute-card swiper-slide display-none turkey-card">
+                            <span class="card-price">37 302 &#8381;</span>
+                            <span class="country">Турция</span>
+                            <h3 class="card-heading"><a href="#" class="card-heading__link">Открытие Турции</a></h3>
+                            <p class="country-direction">Стамбул — Анкара — Каппадокия — Конья — Памуккале — Эфес — Кушадасы — Пергам — Ассос — Троя — Стамбул</p>
+                            <span class="card-descr tour-duration">8 дней &#47; 7 ночей</span>
+                            <span class="card-descr tour-language">Русский язык</span>
+                            <span class="card-descr tour-dates"> 28.04.19 - 05.05.19и еще 3 даты</span>
+                        </div>
+                    </div> 
+                </div>
+                <button class="last-minute-tour__button-prev swiper-button-prev"></button>
+                <button class="last-minute-tour__button-next swiper-button-next"></button>  
+                <button class="last-minute-tour__button">ЗАГРУЗИТЬ ЕЩЕ</button>
+            </section>
+            <section class="popular-tours">
+                <h2 class="main__header popular-tours__heading">Популярные туры</h2>
+                <div class="popular-tours__container swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="popular-tours__cards swiper-slide turkey-card">
+                            <span class="card-price popular-tours__card-price">37 302 &#8381;</span>
+                            <span class="country popular-tours__country">Турция</span>
+                            <h3 class="popular-tours__card-heading card-heading"><a href="#" class="popular-tours__card-link card-heading__link">Открытие Турции</a></h3>
+                        </div>
+                        <div class="popular-tours__cards swiper-slide iceland-card">
+                            <span class="card-price popular-tours__card-price">37 302 &#8381;</span>
+                            <span class="country popular-tours__country">Турция</span>
+                            <h3 class="popular-tours__card-heading card-heading"><a href="#" class="popular-tours__card-link card-heading__link">Открытие Турции</a></h3>
+                        </div>
+                        <div class="popular-tours__cards swiper-slide nord-card">
+                            <span class="card-price popular-tours__card-price">37 302 &#8381;</span>
+                            <span class="country popular-tours__country">Турция</span>
+                            <h3 class="popular-tours__card-heading card-heading"><a href="#" class="popular-tours__card-link card-heading__link">Открытие Турции</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="popular-tours__button-prev swiper-button-prev"></button>
+                <button class="popular-tours__button-next swiper-button-next"></button>
+            </section>
+            <section class="main-form">
+                <h2 class="main__header main-form__heading">Заявка на подбор путешествия</h2>
+                <form action="" method="POST" class="main-form__form contact-form" autocomplete="on" novalidate>
+                    <fieldset class="fieldset contacts-field">
+                        <legend class="contacts-field__legend legend">НЕМНОГО О ВАС</legend>
+                        <label class="contacts-field__label contacts-label" for="name">Имя <span class="star">*</span></label>
+                        <input class="contacts-field__input contacts-input name-input" name="Имя" type="text" required id="name">
+                        <span class="eror-descr eror-span-name"></span>
+                        <label class="contacts-field__label contacts-label" for="tel-number">Телефон</label>
+                        <input class="contacts-field__input contacts-input tel-mask" placeholder="+7___ ___ __ __" name="Телефон" type="tel" id="tel-number">
+                    </fieldset>
+                    <fieldset class="fieldset about-favor">
+                        <legend class="about-favor__legend legend">О путешествии</legend>
+                        <label class="about-favor__label contacts-label" for="place">Куда и когда хотите поехать? <span class="star">*</span></label>
+                        <input class="about-favor__input contacts-input place-input" name="Место тура" type="text" required id="place" placeholder="Континет, страна или город">
+                        <span class="eror-descr eror-span-place"></span>
+                        <label class="about-favor__label contacts-label" for="place">Когда?</label>
+                        <input class="about-favor__input contacts-input" name="Дата поездки" type="text" id="date" placeholder="Даты или временной интервал">
+                    </fieldset>
+                    <fieldset class="fieldset socials-field">
+                        <legend class="socials-field__legend legend">Удобный способ связи</legend>
+                        <input class="socials-field__checkbox contacts-checkbox" type="checkbox" id="viber" value="viber" name="viber">
+                        <label class="socials-field__label checkbox-label" for="viber">Viber</label>
+                        <input class="socials-field__checkbox contacts-checkbox" type="checkbox" id="whatsapp" value="whatsapp" name="whatsapp">
+                        <label class="socials-field__label checkbox-label" for="whatsapp">Whatsapp</label>
+                        <input class="socials-field__checkbox contacts-checkbox" type="checkbox" id="mail" value="mail" name="mail">
+                        <label class="socials-field__label checkbox-label" for="mail">Почта</label>
+                        <input class="socials-field__checkbox contacts-checkbox" type="checkbox" id="phone" value="phone" name="phone">
+                        <label class="socials-field__label checkbox-label" for="phone">Телефон</label>
+                    </fieldset>
+                    <fieldset class="fieldset find-out">
+                        <legend class="find-out__legend legend">Откуда узнали о нас</legend>
+                        <input class="find-out__checkbox contacts-checkbox" type="checkbox" id="web" value="web" name="web">
+                        <label class="find-out__label checkbox-label" for="web">Интернет</label>
+                        <input class="find-out__checkbox contacts-checkbox" type="checkbox" id="friends" value="friends" name="friends">
+                        <label class="find-out__label checkbox-label" for="friends">Рекомендовали друзья</label>
+                        <input class="find-out__checkbox contacts-checkbox" type="checkbox" id="socials" value="socials" name="socials">
+                        <label class="find-out__label checkbox-label" for="socials">Соц. сети</label>
+                        <input class="find-out__checkbox contacts-checkbox" type="checkbox" id="alreadyUse" value="alreadyUse" name="alreadyUse">
+                        <label class="find-out__label checkbox-label" for="alreadyUse">Уже ездил</label>
+                    </fieldset>
+                    <input type="checkbox" id="adreedMailing" class="mailing-checkbox agreed-checkbox" name="Подписка на рассылку">
+                    <label for="adreedMailing" class="mailing-label agreed-label">Получать свежие предложения по электронной почте</label>
+                    <p class="checkbox-desc agreedMail-desc">Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.</p>
+                    
+                    <div class="agreed-wrapper eror-descr"><span class="agreed-check display-none"></span> С обработкой своих персональных данных согласен. <span class="star">*</span></div>
+                    <p class="checkbox-desc">Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения</p>
+
+                    <div class="privacy-politic-container visually-hidden">
+                        <div class="privacy-politic-wrapper">
+                            <button class="privacy-close-button" aria-label="Закрыть окно Пользовательского соглашения">
+                                <span class="privacy-close-span"></span>
+                            </button>
+                            <p class="text-privacy-politic">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Себя букв, буквоград, всемогущая свое они свой необходимыми последний даль ему над что которой города возвращайся. Над великий продолжил рот.</p>
+                            <p class="text-privacy-politic">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Себя букв, буквоград, всемогущая свое они свой необходимыми последний даль ему над что которой города возвращайся. Над великий продолжил рот.</p>
+                            <p class="text-privacy-politic">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Себя букв, буквоград, всемогущая свое они свой необходимыми последний даль ему над что которой города возвращайся. Над великий продолжил рот.</p>
+                            <p class="text-privacy-politic">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Себя букв, буквоград, всемогущая свое они свой необходимыми последний даль ему над что которой города возвращайся. Над великий продолжил рот.</p>
+                            <input type="checkbox" id="privacy-politic" class="privacy-checkbox agreed-checkbox" name="Обработка данных" required>
+                            <label for="privacy-politic" class="privacy-politic-label agreed-label">С обработкой своих персональных данных согласен. <span class="star">*</span></label>
+                            <p class="checkbox-desc">Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения</p>
+                        </div>
+                    </div>
+
+                    <p class="checkbox-desc main-form__desc"><span class="star">*</span> Поля, которые надо обязательно заполнить</p>
+                    <button class="main-form__btn" type="submit" aria-label="Отправить форму">Отправить</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <a href="tel:88001234567" class="footer__tel">8 (800) 123-45-67</a>
+        <a href="tel:88001234567" class="footer__tel">8 (800) 123-45-67</a>
+    </footer>
+</body>
+</html>
