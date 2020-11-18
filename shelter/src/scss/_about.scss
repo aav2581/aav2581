@@ -1,0 +1,171 @@
+.about {
+
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+    @include mobileL {
+        display: grid;
+        grid-template-areas:    "about__header about__header"
+                                "about__descr1 about__img1"
+                                "about__img2 about__descr2"
+                                "about__name-list about__name-list"
+                                "about__list about__list"
+                                "about__link about__link";
+        grid-template-rows: 5% 36% 27% 4% 15% 9%;
+        grid-gap: 10px;
+    }
+
+    @include tablet {
+        grid-template-areas:    "about__header about__header"
+                                "about__descr1 about__img1"
+                                "about__img2 about__img1"
+                                "about__descr2 about__name-list"
+                                "about__descr2 about__list"
+                                "about__link about__link";
+        grid-template-rows: 5% 33% 22% 3% 18% 6%;
+        grid-gap: 3%;
+        margin-bottom: 35px;
+    }
+
+    @include w1000 {
+        grid-template-rows: 5% 22% 27% 4% 18% 6%;
+        grid-gap: 4%;
+    }
+
+
+    &__header {
+        border-top: 1px solid var(--dark-gold);
+        padding-top: 4%;
+        margin-bottom: 20px;
+        grid-area: about__header;
+        line-height: 18px;
+    }
+
+    &__descr {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18px;
+
+        @include mobileL {
+            margin-bottom: 0;
+        }
+        
+        @include tablet {
+            font-size: 24px;
+            line-height: unset;
+        }
+    }
+
+    &__descr-first {
+        grid-area: about__descr1;
+    }
+
+    &__descr-second {
+        grid-area: about__descr2;
+    }
+
+    &__img-container {
+        margin-bottom: 10px;
+        grid-area: about__img1;
+
+        @include mobileL {
+            margin-bottom: 0;
+        }
+    }
+    
+    &__img {
+        border-radius: 12px;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+
+        
+        @include mobileL {
+            display: block;
+            height: 90%;
+        }
+    }
+
+    &__img-kittens {
+        display: none;
+        object-fit: cover;
+
+        @include mobileL {
+            display: block;
+            height: 90%;
+            width: 100%;
+            grid-area: about__img2;
+        }
+    }
+
+    &__name {
+        display: block;
+        margin: 1% 0;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 500;
+
+        @include tablet {
+            font-size: 22px;
+        }
+    }
+
+    &__list-name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 15px;
+        text-align: center;
+        grid-area: about__name-list;
+
+        @include mobileL {
+            margin-bottom: 0;
+        }
+        
+        @include tablet {
+            font-size: 26px;
+        }
+    }
+
+    &__list {
+        margin-bottom: 10%;
+
+        @include mobileL {
+            grid-area: about__list;
+            margin-bottom: 0;
+            display: flex; 
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        padding: 8px;
+        margin-bottom: 12px;
+        text-align: center;
+        border: 1px  solid var(--dark-gold);
+        border-radius: 12px;
+
+        @include mobileL {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @include tablet {
+            font-size: 20px;
+        }
+    }
+
+    &__show-more {
+        margin-bottom: 10px;
+        padding: 18px;
+
+        @include mobileL {
+            grid-area: about__link;
+        }
+    }
+}
+

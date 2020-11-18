@@ -1,0 +1,63 @@
+.take-home {
+    &__header {
+        margin-bottom: 0;
+    }
+}
+
+.th-main {
+    background-color: rgba(184, 134, 11, 0.3);
+    padding: 20px;
+
+    &__container {
+        max-width: 900px;
+    }
+
+    &__header {
+        margin-bottom: 3%;
+    }
+    
+    &__notice {
+        font-size: 16px;
+        border: 1px solid var(--dark);
+        border-radius: 5px;
+        padding: 2%;
+        text-align: center;
+        margin-bottom: 20px;
+        font-style: italic;
+
+        @include tablet {
+            font-size: 20px;
+        }
+    }
+
+    &__item {
+        padding: 3.5%;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 5%;
+        border: 1px solid var(--dark-gold);
+        border-radius: 15px;
+        cursor: pointer;
+
+        @include tablet {
+            margin-bottom: 3%;
+            font-size: 22px;
+        }
+
+        @include w1000 {
+            margin-bottom: 2%;
+            font-size: 25px;
+        }
+    
+        &--active {
+            background-color: rgba(255, 215, 0, 0.4);
+        }
+    }
+
+    &__show-more {
+        padding: 2%;
+
+    }
+
+
+}

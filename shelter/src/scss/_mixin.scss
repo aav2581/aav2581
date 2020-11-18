@@ -1,0 +1,30 @@
+@mixin outline {
+	outline: 1px solid red;
+}
+
+@mixin beforeHoverTransform {
+	transition: transform 0.3s ease-in-out;
+}
+
+@mixin hoverTransformScale {
+	transform: scale(1.2);
+	transition: transform 0.3s ease-in-out;
+}
+
+@mixin w1000 {
+	@media (min-width: 1000px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mobileL {
+	@media (min-width: 425px) {
+		@content;
+	}
+}

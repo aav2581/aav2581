@@ -1,0 +1,287 @@
+.header {
+    background-color: var(--dark);
+
+    margin-bottom: 20px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px;
+        
+        @include w1000 {
+            justify-content: flex-start;
+        }
+    }
+
+    &__logo-link {
+        margin-right: 10%;
+    }
+
+    &__logo {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        box-shadow: 0 0 5px 2px var(--dark-gold);
+        @include beforeHoverTransform;
+
+        &:hover,
+        &:active {
+            @include hoverTransformScale;
+        }
+    }
+
+    &__link {
+        font-size: 27px;
+        font-weight: 700;
+        color: var(--gold);
+        text-transform: uppercase;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--dark-gold);
+            transition: color 0.3s ease-in-out;
+        }
+    }
+
+    &__link-span {
+        text-transform: none;
+        display: none;
+
+        @include tablet {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+
+}
+
+.burger {
+    position: relative;
+    height: 30px;
+    width: 35px;
+
+    &__span {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 42%;
+        width: 35px;
+        height: 5px;
+        background-color: var(--gold);
+    
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 35px;
+            height: 5px;
+            background-color: var(--gold);
+            @include beforeHoverTransform;
+            transform-origin: right;
+        }
+
+        &::after {
+            bottom: -11px;
+        }
+
+        &::before {
+            top: -11px;
+        }
+    }
+
+    &:hover,
+    &:active {
+        .burger__span::before {
+            transform: scaleX(0.8);
+            transform-origin: right;
+            @include beforeHoverTransform;
+        }
+
+        .burger__span::after {
+            transform-origin: right;
+            transform: scaleX(1.2);
+            @include beforeHoverTransform;
+        }
+    }
+
+    @include w1000 {
+        display: none;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+
+    &__span,
+    &__span::after {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 5px;
+        background-color: var(--gold);
+        transform-origin: center;
+        @include beforeHoverTransform;
+    }
+
+    &__span {
+        top: 40%;
+        transform: rotate(45deg);
+    }
+
+    &__span::after {
+        content: '';
+        transform: rotate(90deg);
+    }
+
+    &:hover,
+    &:active {
+        .close-btn__span {
+            @include beforeHoverTransform;
+            transform: rotate(225deg);
+        }
+    }
+}
+
+.menu-container {
+    overflow: auto;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: var(--dark);
+    transform: translateX(150%);
+    transition: transform 0.6s ease-in-out;
+
+    @include tablet {
+        width: 50%;
+    }
+
+    @include w1000 {
+        overflow: unset;
+        margin-top: 20px;
+        position: static;
+        padding-top: 0;
+        width: 100%;
+        height: fit-content;
+        transform: translateX(0);
+    }
+
+    &__nav {
+        width: 100%;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include w1000 {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+    }
+
+    &__nav-item {
+
+        margin-bottom: 8%;
+        padding-bottom: 2%;
+        font-size: 24px;
+        color: var(--gold);
+        border-bottom: 1px solid transparent;
+        transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        &:hover,
+        &:active {
+            border-bottom: 1px solid var(--dark-gold);
+            color: var(--dark-gold);
+            transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        @include w1000 {
+            // width: 17%;
+            font-size: 20px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            transition: color 0.3s ease-in-out;
+
+            &:hover,
+            &:active {
+                color: var(--dark-gold);
+                border-bottom: 1px solid transparent;
+                transition: color 0.3s ease-in-out;
+            }   
+        }
+    }
+
+    &__nav-link {
+        text-align: center;
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        width: 90%;
+        margin-top: auto;
+        margin-bottom: 40px;
+        padding: 0 20px;
+
+        @include w1000 {
+            position: absolute;
+            top: -140%;
+            right: 0;
+            width: 40%;
+            height: 70%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &__contacts-item,
+    &__icon {
+        width: 35px;
+        height: 35px;
+	    transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;  
+    }
+
+    &__contacts-item:hover,
+    &__contacts-item:active {
+        .menu-container__icon {
+	        transform: scale(1.2);
+            transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;  
+            fill: var(--dark-gold);
+        }
+    }
+
+    &__contacts-link {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__icon {
+        fill: var(--gold);
+    }
+}
+
+.menu-container--active {
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
