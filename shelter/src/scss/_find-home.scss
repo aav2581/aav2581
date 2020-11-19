@@ -25,6 +25,13 @@
         height: 100%;
         object-fit: contain;
         border-radius: 12px;
+
+        @include mobileL {
+            display: block;
+            width: 75%;
+            height: 75%;
+            margin: 0 auto 10px;
+        }
     }
 
     &__name {
@@ -48,8 +55,12 @@
         font-size: 16px;
         margin-bottom: 4%;
 
+        @include mobileL {
+            font-size: 18px;
+        }
+
         @include tablet {
-            font-size: 23px;
+            font-size: 20px;
         }
     }
 
