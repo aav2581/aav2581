@@ -1,0 +1,36 @@
+@mixin outline {
+	outline: 1px solid red;
+}
+
+@mixin beforeHoverTransform {
+	transition: transform 0.3s ease-in-out;
+}
+
+@mixin hoverTransformScale {
+	transform: scale(1.2);
+	transition: transform 0.3s ease-in-out;
+}
+
+@mixin w1200 {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin w950 {
+	@media (max-width: 950px) {
+		@content;
+	}
+}
+
+@mixin w725 {
+	@media (max-width: 725px) {
+		@content;
+	}
+}
+
+@mixin w488 {
+	@media (max-width: 488px) {
+		@content;
+	}
+}

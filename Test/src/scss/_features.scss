@@ -1,0 +1,115 @@
+.features {
+    animation: 1s ease-in-out 1.6s 1 alternate none translateL;
+    background-color: #F5FBFD;
+
+    &__container {
+        padding: 71px 0 100px;
+
+        @include w725 {
+            padding: 30px 0px 50px;
+        }
+    }
+
+    &__heading {
+        margin: 0 auto 25px;
+        font-family: 'Sunflower';
+        font-weight: 700;
+        font-size: 36px;
+        color: var(--dark-blue);
+        text-align: center;
+    }
+
+    &__heading-descr {
+        width: 72%;
+        margin: 0 auto 68px;
+
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--descr-color);
+        text-align: center;
+        letter-spacing: 0.03em;
+        line-height: 28px;
+    }
+
+    .accordion {
+
+        &__header {
+            position: relative;
+            padding: 21px 0 10px 30px;
+
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 38px;
+            color: var(--dark-blue);
+            letter-spacing: 0.03em;
+
+            border-top: 1px solid #8B9FA6;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+
+            &:hover,
+            &:active,
+            &:focus {
+                transition: color 0.3s ease-in-out;
+                color: var(--hover-color);
+                box-shadow: none;
+            }
+
+            &-span {
+                background-image: url('../img/done.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+                top: 35px;
+                right: 32px;
+                width: 20px;
+                height: 12px;
+                transition: transform 0.3s ease-in-out;
+
+                &--active {
+                    transition: transform 0.3s ease-in-out;
+                    transform: rotate(180deg);
+                }
+
+                @include w725 {
+                    right: -4%; 
+                }
+            }
+
+            @include w725 {
+                width: 90%;
+                margin-left: 3%;
+                padding-left: 15px;
+            }
+        }
+
+        &__descr {
+            padding: 10px 20px 0 30px;
+
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--descr-color);
+            letter-spacing: 0.03em;
+            line-height: 28px;
+
+            transform-origin: top;
+            transform: scaleY(0);
+            height: 0;
+
+            transition: transform 0.1s ease-in-out;
+
+            &--active {
+                transition: transform 0.3s ease-in-out;
+                transform: scaleY(1);
+                height: 100%;
+
+                @include w725 {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

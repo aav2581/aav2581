@@ -1,0 +1,104 @@
+.about {
+    animation: 1s ease-in-out 0.7s 1 alternate none translateL;
+
+    &__container {
+        max-width: 1110px;
+        padding: 118px 0 182px;
+
+        background-image: url('../img/map.svg');
+        background-repeat: no-repeat;
+        background-size: 823px 457px;
+        background-position: left center;
+
+        @include w1200 {
+            padding: 118px 20px 182px;
+        }
+        
+        @include w950 {
+            padding-bottom: 30px;
+            padding-top: 20px;
+        }
+    }
+    
+    &__heading {
+        margin-bottom: 21px;
+        font-family: 'Sunflower';
+        font-weight: 700;
+        font-size: 42px;
+        color: var(--dark-blue);
+
+        @include w950 {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        width: 398px;
+        margin-bottom: 20px;
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--descr-color);
+
+        @include w950 {
+            margin: 0 auto 20px;
+        }
+
+        @include w488 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__video-btn {
+        display: block;
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--hover-color);
+        transition: color 0.3s ease-in-out;
+
+        &:hover,
+        &:active {
+            transition: color 0.3s ease-in-out;
+            color: var(--dark-blue);
+        }
+
+        @include w950 {
+            margin: 0 auto 20px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 18px;
+        right: 11px;
+        z-index: 12;
+
+        @include w950 {
+            position: static;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @include w488 {
+            width: 70%;
+        }
+    }
+
+    &__img-icon {
+        position: absolute;
+        top: 4px;
+        right: 59px;
+        width: 452px;
+        height: 402px;
+    
+        @include w950 {
+            display: none;
+        }
+    }
+
+}
+

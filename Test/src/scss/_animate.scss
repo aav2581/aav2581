@@ -1,0 +1,35 @@
+@keyframes translateR {
+    0% {
+       transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(150px);
+    }
+
+    75% {
+        transform: translateX(-150px);
+    }
+
+    100% {
+       transform: translateX(0px);
+    }
+}
+
+@keyframes translateL {
+    0% {
+       transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(-150px);
+    }
+
+    75% {
+        transform: translateX(150px);
+    }
+
+    100% {
+       transform: translateX(0px);
+    }
+}

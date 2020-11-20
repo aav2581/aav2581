@@ -1,0 +1,58 @@
+.footer {
+    background-color: #485053;
+
+    &__container {
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+
+        @include w1200 {
+            padding: 40px 20px;
+        }
+    }
+
+    &__logo-icon {
+        width: 125px;
+        height: 29px;
+        @include beforeHoverTransform;
+
+        &:hover,
+        &:active,
+        &:focus {
+            @include hoverTransformScale;
+        }
+    }
+
+    &__contacts-list {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__contacts-link {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+
+    &__contacts-item,
+    &__item-icon {
+        width: 24px;
+        height: 24px;
+        @include beforeHoverTransform;
+    }
+
+    &__contacts-item {
+        padding-top: 7px;
+
+        &:not(:last-child) {
+            margin-right: 11px;
+        }
+
+        &:hover,
+        &:active,
+        :focus {
+            @include hoverTransformScale;
+        }
+    }
+}

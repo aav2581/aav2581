@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name site</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="icon" href="fav.svg" sizes="any">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <h1 class="visually-hidden">Name site</h1>
+            <a href="#" class="header__logo">
+                <img class="header__logo-img" src="img/logo_webim_dark.png" alt="Logo of company">
+            </a>
+            <button class="header__btn">
+                <span class="header__btn-span"></span>
+            </button>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#Main" class="header__nav-link">Main</a></li>
+                    <li class="header__nav-item"><a href="#Features" class="header__nav-link">Features</a></li>
+                    <li class="header__nav-item"><a href="#Item" class="header__nav-link">Item</a></li>
+                    <li class="header__nav-item"><a href="#Partners" class="header__nav-link">Partners</a></li>
+                    <li class="header__nav-item"><a href="#FQA" class="header__nav-link">F.A.Q.</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="Main">
+        <section id="main" class="about">
+            <div class="container about__container">
+                <h2 class="about__heading">Header</h2>
+                <p class="about__descr">Lorem irure fugiat cupidatat duis mollit commodo.
+                    Eu cillum ea reprehenderit elit laboris do exercitation
+                    laborum sit elit incididunt aute fugiat consectetur. </p>
+                <button class="about__video-btn">Watch the video to find out more</button>
+                <img class="about__img" src="img/Vector.png" alt="Презентация возможностей компании">
+                <svg class="about__img-icon">
+                    <use xlink:href="img/sprite.svg#Ellips"></use>
+                </svg>
+            </div>
+        </section>
+        <section id="Features" class="functionality">
+            <div class="container functionality__container">
+                <h2 class="functionality__heading">Functionality and features</h2>
+                <ul class="functionality__list">
+                    <li class="functionality__item icon-1">
+                        <p class="functionality__item-descr">Access data from over 30,0000 global stations</p>
+                    </li>
+                    <li class="functionality__item icon-2">
+                        <p class="functionality__item-descr">Create your own library of data</p>
+                    </li>
+                    <li class="functionality__item icon-3">
+                        <p class="functionality__item-descr">Analyse your data</p>
+                    </li>
+                    <li class="functionality__item icon-4">
+                        <p class="functionality__item-descr">Present your data</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="Item" class="form">
+            <div class="container form__container">
+                <div class="form__img-container"></div>
+                <form action="#" class="form__form">
+                    <h2 class="form__heading">We want the best value for you:</h2>
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">1. Are you willing to spend money?</legend>
+                        <input type="radio" class="form__radio" id="spend-yes" value="spend money" name="spend money">
+                        <label tabindex="0" class="form__label" for="spend-yes">Yes</label>
+                        <input type="radio" class="form__radio" id="spend-no" value="spend money" name="spend money">
+                        <label tabindex="0" class="form__label form__label--last" for="spend-no">No</label>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">2. Who are you?</legend>
+                        <input type="radio" class="form__radio" id="individual" value="individual" name="Who are you">
+                        <label tabindex="0" class="form__label" for="individual">Individual</label>
+                        <input type="radio" class="form__radio" id="student" value="student" name="Who are you">
+                        <label tabindex="0" class="form__label" for="student">Student </label>
+                        <input type="radio" class="form__radio" id="user" value="user" name="Who are you">
+                        <label tabindex="0" class="form__label form__label--last" for="user">Company user</label>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">3. What sort of data are you working with?</legend>
+                        <input type="radio" class="form__radio" id="meteorological" value="meteorological"
+                            name="sort of data">
+                        <label tabindex="0" class="form__label" for="meteorological">Meteorological</label>
+                        <input type="radio" class="form__radio" id="other" value="other" name="sort of data">
+                        <label tabindex="0" class="form__label form__label--last" for="other">Other </label>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">4. Wind Speed Data:</legend>
+                        <input type="radio" class="form__radio" id="own" value="own" name="wind speed data">
+                        <label tabindex="0" class="form__label" for="own">I have my own</label>
+                        <input type="radio" class="form__radio" id="find" value="want to find" name="wind speed data">
+                        <label tabindex="0" class="form__label form__label--last" for="find">I want to find quality wind speed data
+                        </label>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section id="Partners" class="partners">
+            <div class="container partners__container">
+                <h2 class="partners__heading">Our partners</h2>
+                <div class="swiper-container partners__swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="partners__item swiper-slide">
+                            <a href="#" class="partners__link">
+                                <img src="img/logo_qube_logo.png" alt="Patner's logo">
+                            </a></div>
+                        <div class="partners__item swiper-slide"><a href="#" class="partners__link">
+                                <img src="img/Без-имени-2.png" alt="Patner's logo">
+                            </a></div>
+                        <div class="partners__item swiper-slide"><a href="#" class="partners__link">
+                                <img src="img/mor-sagmon.png" alt="Patner's logo">
+                            </a></div>
+                        <div class="partners__item swiper-slide"><a href="#" class="partners__link">
+                                <img src="img/logo_1-1.png" alt="Patner's logo">
+                            </a></div>
+                    </div>
+                </div>
+                <button class="swiper-button-prev partners__btn-prev"></button>
+                <button class="swiper-button-next partners__btn-next"></button>
+            </div>
+        </section>
+        <section id="FQA" class="features">
+            <div class="container features__container">
+                <h2 class="features__heading">Our features</h2>
+                <p class="features__heading-descr">Lorem irure fugiat cupidatat duis mollit commodo. Eu cillum ea
+                    reprehenderit elit laboris do exercitation
+                    laborum sit elit incididunt aute fugiat consectetur. </p>
+                <div class="features__accordion accordion">
+                    <h3 class="accordion__header" tabindex="0">Lorem irure fugiat cupidatat duis mollit commodo?<span
+                            class="accordion__header-span"></span></h3>
+                    <p class="accordion__descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo obcaecati
+                        eius sunt, nihil tenetur fuga. Itaque asperiores consequuntur dolorem assumenda.</p>
+                    <h3 class="accordion__header" tabindex="0">Commodo nisi aliqua proident consequat consequat?<span
+                            class="accordion__header-span"></span></h3>
+                    <p class="accordion__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+                        natus perferendis, atque iure itaque placeat officia sint accusamus ea quidem.</p>
+                    <h3 class="accordion__header" tabindex="0">Sunt veniam voluptate reprehenderit consectetur eiusmod
+                        quis?<span class="accordion__header-span"></span></h3>
+                    <p class="accordion__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+                        natus perferendis, atque iure itaque placeat officia sint accusamus ea quidem.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <a href="#" class="footer__logo">
+                <img class="footer__logo-img" src="img/logo_webim_gray.png" alt="Logo of company">
+            </a>
+            <nav class="footer__contacts">
+                <ul class="footer__contacts-list">
+                    <li class="footer__contacts-item"><a href="#" class="footer__contacts-link"
+                            title="Find us on Facebook">
+                            <svg class="footer__item-icon">
+                                <use xlink:href="img/sprite.svg#facebook"></use>
+                            </svg>
+                        </a></li>
+                    <li class="footer__contacts-item"><a href="#" class="footer__contacts-link"
+                            title="Find us on Youtube">
+                            <svg class="footer__item-icon">
+                                <use xlink:href="img/sprite.svg#youtube"></use>
+                            </svg>
+                        </a></li>
+                    <li class="footer__contacts-item"><a href="#" class="footer__contacts-link"
+                            title="Find us on Instagramm">
+                            <svg class="footer__item-icon">
+                                <use xlink:href="img/sprite.svg#inst"></use>
+                            </svg>
+                        </a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
