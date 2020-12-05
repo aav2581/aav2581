@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="start-container">
+            <div class="wrapper">
+                <form>
+                    <label class="gorizont-select-label select-label">Выберете количество кард по горизонтали:</label>
+                    <select name="gorizont" class="select-gorizont select">
+                        <option value="4">-</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label class="vertical-select-label select-label">Выберете количество кард по вертикали:</label>
+                    <select name="vertical" class="select-vertical select">
+                        <option value="4">-</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                    </select>
+                    <p class="number-info">По умолчанию по горизонтали и вертикали по 4 карты.</p>
+                </form>
+                <button class="start-game no-timer">Начать игру БЕЗ таймера</button>
+                <button class="start-game timer">Начать игру С таймером</button>
+            </div>
+        </div>
+        <ul class="card-list"></ul>
+        <button class="restart-button" style="display: none">Сыграть ещё раз</button>
+    </div>
+</body>
+</html>
