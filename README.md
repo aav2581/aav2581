@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👑, I'm Antonina!</h1>
-<h3 align="center">A am frontend developer from Saint Peterburg.</h3>
+<h3 align="center">I am frontend developer from Saint Peterburg.</h3>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
